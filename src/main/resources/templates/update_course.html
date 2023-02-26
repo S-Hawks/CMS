@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Employee</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+  <h1>Update Course</h1>
+  <hr>
+  <h2>Update and Save Course</h2>
+  <form method="post" th:action="@{/addCourse}" th:object="${course}" class="col card p-3 mb-5">
+    <div class="form-group">
+      <label for="ID">ID</label>
+      <input id="id" placeholder="Enter ID" required type="text" th:field="*{id}"
+             class="form-control"/>
+    </div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" placeholder="Enter Name of the course" required type="text" th:field="*{name}"
+             class="form-control"/>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input id="description" required type = "text" th:field="*{description}" class="form-control "/>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Update Course">
+  </form>
+  <hr>
+  <a th:href="@{/ui/courses}">Back to Add employee form</a>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
